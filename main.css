@@ -3,6 +3,10 @@ body::before {
     content: '';
     height: 60px;
   }
+  *::before,*::after{
+   box-sizing: border-box;
+   overflow-x: hidden;
+  }
 .navbar .navbar-brand{
     font-size: 1.5rem;
   }
@@ -34,10 +38,10 @@ body::before {
     width: 100%;
     height: 100%;
     border-radius: 10px;
-  }
+  }*/
   
   @media (min-width: 768px) {
     .news-input {
       width: 50%;
     }
-  } */
+  } 
