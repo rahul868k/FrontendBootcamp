@@ -24,11 +24,44 @@
      <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 
+    <!-- Effects css -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="main.css">
 
     <!-- <link rel="shortcut icon" href="images/fundamentals.svg" type="image/svg"> -->
 
     <title>Frontend Bootcamp</title>
+
+    
+    <!-- <script type="text/javascript">
+
+      // Menu-toggle button
+
+      $(document).ready(function() {
+            $(".navbar-toggler").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('red');
+            }
+
+            else {
+                  $('nav').removeClass('white');
+            }
+      })
+
+
+      </script> -->
+
     
   </head>
 
@@ -156,10 +189,10 @@
     <section id="learn" name="fundamentals" class="py-3 p-lg-4">
       <div class="container">
         <div class="row align-items-center justify-content-between">
-          <div class="col-md">
+          <div class="col-md" data-aos="fade-left">
             <img src="images/fundamentals.svg" class="img-fluid" alt="img" />
           </div>
-          <div class="col-md py-3 p-lg-4">
+          <div class="col-md py-3 p-lg-4" data-aos="fade-right">     <!--fundamentals-->
             <h2>Learn The Fundamentals</h2>
             <p class="lead">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -182,7 +215,7 @@
     <section id="learn" class="bg-dark text-light">
       <div class="container">
         <div class="row align-items-center justify-content-between">
-          <div class="col-md py-3 px-3 p-lg-4">
+          <div class="col-md py-3 px-3 p-lg-4" data-aos="fade-left">
             <h2>Learn React</h2>
             <p class="lead">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -198,7 +231,7 @@
               <i class="bi bi-chevron-right"></i> Read More
             </a>
           </div>
-          <div class="col-md">
+          <div class="col-md" data-aos="fade-right">
             <img src="images/react.svg" class="img-fluid" alt="" />
           </div>
         </div>
@@ -479,6 +512,14 @@
         </div>
       </div>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset:400, duration:1000
+      });
+    </script>
+  
 
     <!-- Optional JavaScript; choose one of the two! -->
 
