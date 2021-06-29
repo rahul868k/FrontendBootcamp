@@ -1,3 +1,6 @@
+html, body{
+  scroll-behavior: smooth;
+}
 body::before {
     display: block;
     content: '';
@@ -6,6 +9,7 @@ body::before {
   *::before,*::after{
    box-sizing: border-box;
    overflow-x: hidden;
+   scroll-behavior: smooth;
   }
 .navbar .navbar-brand{
     font-size: 1.5rem;
