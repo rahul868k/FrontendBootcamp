@@ -1,11 +1,11 @@
 html, body{
   scroll-behavior: smooth;
 }
-/* body::before {
+  body::before {
     display: block;
     content: '';
-    height: -60px;
-  } */
+    height: 60px;
+   }
   *::before,*::after{
    box-sizing: border-box;
    scroll-behavior: smooth;
@@ -64,6 +64,7 @@ html, body{
 
   header{
     position: fixed;
+    top:0;
     left: 0; right: 0;
     font-family: sans-serif;
     background: #212529;
