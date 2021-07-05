@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>svg login form</title>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+
+  <div class="container">
+      <h2>Sign In</h2>
+      <form action="#" class="form">
+          <label for="name" class="lable"> 
+              <input class="input" type="text" placeholder="Username" name="username" required minlength="10">
+              <svg viewBox="0 0 20 20" class="icon">
+                <path d="M0 0 L10 10 L0 20"></path>
+              </svg>
+              <svg class="line" viewBox="0 0 40 2" preserveAspectRatio="none"> 
+                <path d="M0 1 L40 1"/>
+                <path d="M0 1 L40 1" class="focus"/>
+                <path d="M0 1 L40 1" class="invalid"/>
+                <path d="M0 1 L40 1" class="valid"/>
+              </svg>
+          </label>
+          <label class="lable" for="name">
+            <input class="input" type="password" placeholder="password" name="password" required minlength="8">
+            <svg viewBox="0 0 20 20" class="icon">
+              <path d="M0 0 L10 10 L0 20"></path>
+            </svg>
+            <svg class="line" viewBox="0 0 40 2" preserveAspectRatio="none"> 
+              <path d="M0 1 L40 1"/>
+              <path d="M0 1 L40 1" class="focus"/>
+              <path d="M0 1 L40 1" class="invalid"/>
+              <path d="M0 1 L40 1" class="valid"/>
+            </svg>
+        </label>
+        <div class="pass">Forgot password?</div>
+        <button class="button" type="submit" value="login">Sign in</button>
+        <div class="signup_link">
+            Not a member? <a href="#">Sign Up</a>
+        </div>
+      </form>
+  </div>
+
+  <body>
+    
+  </body>
+</html>

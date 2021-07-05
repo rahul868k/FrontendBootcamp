@@ -1,22 +1,43 @@
 html, body{
   scroll-behavior: smooth;
 }
-body::before {
+/* body::before {
     display: block;
     content: '';
-    height: 60px;
-  }
+    height: -60px;
+  } */
   *::before,*::after{
    box-sizing: border-box;
-   overflow-x: hidden;
    scroll-behavior: smooth;
-  }
-.navbar .navbar-brand{
+   }
+
+   /* === nav bar == */
+
+/*.navbar .navbar-brand{
     font-size: 1.5rem;
+    background-color: white;
+    background-image: linear-gradient(to right, red, white);
+    background-blend-mode: multiply;
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* color: transparent; */
+    /* -webkit-text-fill-color: transparent;
+    animation: move 2s linear infinite; 
+    -webkit-animation: move 2s linear infinite; 
+    
+  }*/
+  /* @keyframes move {
+      0%{
+        background-position: 0% 30%;
+      }
+      100%{
+        background-position: 100% 50%;
+      }
   }
   .navbar .nav-item{
     margin-left: 1em;
   }
+
   .button{
       border: none;
       box-shadow: none;
@@ -37,7 +58,207 @@ body::before {
     box-shadow: none;
     border: 0.02px solid rgba(38, 0, 255, 0.35);
   }
+  }  */
+
+  /* css nav bar */
+
+  header{
+    position: fixed;
+    left: 0; right: 0;
+    font-family: sans-serif;
+    background: #212529;
+    padding: 5px 10px;
+    z-index: 1000;
   }
+  header ul{
+    list-style-type: none;
+    overflow: hidden;
+    max-height: 50px;
+    transition: max-height 0.4s ease-out;
+
+  }
+  header li{
+    padding: 15px 5px;
+  }
+  header li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    position: relative;
+    transition: color 250ms ease;
+  }
+  header li a:hover{
+    color: hsl(0, 0%, 80%);
+  }
+  header li:not(:first-child, :last-child) a::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 0;
+    background: white;
+    display: block;
+    bottom: 0px;
+    transform: scaleX(0%);
+    transform-origin: center;
+    transition: transform 250ms ease;
+  }
+  header li:not(:first-child,:last-child) a:hover::after{
+    transform: scaleX(100%);
+  }
+  .logo small{
+    color: gray;
+  }
+
+        /* mobile view*/
+
+  .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+          
+  }
+  header .menu-icon{
+    cursor: pointer;
+    padding: 15px 10px;
+    position: relative;
+    display: block;
+    margin-top: 10px;
+  }
+  header .menu-icon .nav-icon{
+    cursor: pointer;
+    background: #999;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background 0.2s ease-out;
+  }
+  .nav-icon::before,.nav-icon::after{
+    content: "";
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    position: absolute;
+    width: 18px;
+    transition: all 0.2s ease-in-out;
+}
+.nav-icon::before{
+    top:5px;
+}
+.nav-icon::after{
+    top: -5px;
+}
+#menu-btn{
+  display: none;
+}
+.logo{
+  white-space: nowrap;
+  flex: 1;
+  font-size: 1.1rem;
+  padding: 0;
+}
+.menu-icon{
+  /* order: 2; */
+  float: right;
+}
+.item.button{
+  order: 1;
+  width: auto;
+  display: block;
+}
+.item{
+  width: 100%;
+  order: 3;
+  text-align: center;
+}
+.menu .button:not(.secondary) a{
+  text-decoration: none;
+  padding: 7px 15px;
+  background: teal;
+  border: 1px solid #006d6d;
+  border-radius: 50em;
+}
+.button:not(.secondary) a:hover{
+  background: #006d6d;
+  border-color: #005959;
+  transition: all 0.25s;
+}
+
+       /* tablet view */
+
+  @media all and (min-width:468px){
+    .item{
+        text-align: start;
+    }
+  }
+
+        /* laptop view*/
+
+  @media all and (min-width:768px){
+    .item{
+      display: block;
+      width: auto;
+    }
+    header .menu-icon{
+      display: none;
+    }
+    .logo{
+      order: 0;
+    }
+    .item{
+        order:1
+    }
+    .button{
+        order:2;
+    }
+    .menu li{
+        padding: 15px 10px;
+    }
+    .menu li.button{
+        padding-right: 0;
+    }
+}
+
+header .menu-btn:checked ~ .menu{
+  max-height: 360px;
+}
+header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+}
+header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+    top: 0;
+}
+header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top: 0;
+}
+                      
+
+
+  /* === css nav bar end === */
+
+  /* svg  */
+
+  /* .icon{
+    width: 0.9rem;
+  }
+  svg{
+    display: flex;
+    order: -1;
+    position: relative;
+    left: 3.5%;
+    fill:none;
+    stroke: black;
+  }
+  input:focus{
+    outline: none;
+    border-color: hsl(0,0%,25%);
+  } */
+
+  /* === svg === */
   @media all and (max-width:425px){
   #map {
     width: 250px;
