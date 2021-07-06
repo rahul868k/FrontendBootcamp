@@ -160,6 +160,10 @@ html, body{
   font-size: 1.1rem;
   padding: 0;
 }
+ul.menu{
+  padding: 0;
+  margin: 0;
+}
 .menu-icon{
   /* order: 2; */
   float: right;
@@ -174,14 +178,14 @@ html, body{
   order: 3;
   text-align: center;
 }
-.menu .button:not(.secondary) a{
+.menu .button a{
   text-decoration: none;
   padding: 7px 15px;
   background: teal;
   border: 1px solid #006d6d;
   border-radius: 50em;
 }
-.button:not(.secondary) a:hover{
+.button a:hover{
   background: #006d6d;
   border-color: #005959;
   transition: all 0.25s;
