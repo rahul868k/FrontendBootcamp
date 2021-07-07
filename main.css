@@ -78,7 +78,6 @@ html, body{
     overflow: hidden;
     max-height: 50px;
     transition: max-height 0.4s ease-out;
-
   }
   header li{
     padding: 15px 5px;
@@ -120,7 +119,6 @@ html, body{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-          
   }
   header .menu-icon{
     cursor: pointer;
