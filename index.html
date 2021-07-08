@@ -109,7 +109,6 @@
 
 
   <body>
-
     <!-- nav bar -->
 
     <!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark py-3 fixed-top">
@@ -531,12 +530,45 @@
     <footer class="py-3 p-lg-4 bg-dark text-white text-center position-relative" data-aos="fadeInUp" data-aos-id="super-duper">
       <div class="container">
         <p class="lead">Copyright &copy; 2021 Frontend Bootcamp</p>
-
-        <a href="#" class="up position-absolute bottom-0 end-0 p-2">
-          <i class="bi bi-arrow-up-circle h1"></i>
-        </a>
       </div>
     </footer>
+
+    <!-- == scroll to top == -->
+    <a href="#top" id="back-top" class="up p-2">
+      <i class="bi bi-arrow-up-circle h1"></i>
+    </a>
+
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	// hide #back-top first
+	$("#back-top").hide();
+	
+	// fade in #back-top
+	$(function () {
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 300) {
+				$('#back-top').fadeIn();
+			} else {
+				$('#back-top').fadeOut();
+			}
+		});
+
+		// scroll body to 0px on click
+		$('#back-top a').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800);
+			return false;
+		});
+	});
+
+});
+</script>
+ <!-- == scroll to top == -->
 
     <!-- Modal -->
     <div class="modal fade" id="enroll" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true">

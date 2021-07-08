@@ -11,6 +11,23 @@ html, body{
    scroll-behavior: smooth;
    }
 
+   /* === scroll to top === */
+
+   @media screen and (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+    #back-top {
+      z-index: 9999;
+      color: rgb(255, 123, 0);
+      position: fixed;
+      bottom: 2%;
+      right: 2%;
+      -webkit-transition: 1s;
+      -moz-transition: 1s;
+      transition: 1s;
+      font-size: clamp(14px, 50%, 16px);
+    }
    /* === nav bar == */
 
 /*.navbar .navbar-brand{
