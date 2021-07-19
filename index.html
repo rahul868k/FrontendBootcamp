@@ -785,7 +785,11 @@
   </script>
 
   <script>
-    
+    $(document).ready(function(){
+      $('body').click(function(){
+        $(this).unbind('mouseenter mouseleave')
+      })
+    })
   </script>
   <!-- cursor animation -->
 </body>

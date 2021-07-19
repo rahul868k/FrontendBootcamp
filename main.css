@@ -111,10 +111,6 @@ html, body{
       outline: none;
 }
   }
-  *:hover{
-    pointer-events: none !important;
-    background: none;
-  }
   /* === social media side-menu end */
 
    /* === scroll to top === */
