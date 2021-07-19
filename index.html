@@ -122,6 +122,25 @@
         $(this).toggleClass('fa-chevron-right');
       })
     })
+
+    // ui info show up
+
+    $(document).ready(function () {
+      $('.ui-msg').append('<span class="ui-x">X</span>');
+
+      $(function () {
+        $('.ui-x').click(function () {
+          $(this).parent('.ui-msg').slideUp(300);
+        })
+      })
+
+      $(function () {
+        $('.ui-fade').click(function () {
+          $('.ui-msg').slideDown(300);
+        })
+      });
+
+    })
   </script>
 
   <!-- <script>
@@ -252,7 +271,6 @@
         </div>
       </div>
     </div>
-    </div>
   </section>
 
   <!-- Boxes -->
@@ -328,9 +346,15 @@
             quae similique laboriosam iste minus placeat odit velit quos,
             nulla architecto amet voluptates?
           </p>
-          <a href="#" class="btn btn-light mt-3">
+          <a href="#######" class="ui-fade btn btn-light mt-3">
             <i class="bi bi-chevron-right"></i> Read More
           </a>
+          <div class="ui-msg bg-info mt-3 p-3">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, molestias ab ad ut reiciendis voluptas
+              vel architecto ratione voluptates asperiores?
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -351,9 +375,15 @@
             quae similique laboriosam iste minus placeat odit velit quos,
             nulla architecto amet voluptates?
           </p>
-          <a href="#" class="btn btn-light mt-3">
+          <a href="###############" class="ui-fade btn btn-light mt-3">
             <i class="bi bi-chevron-right"></i> Read More
           </a>
+          <div class="ui-msg bg-info mt-3 p-3">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores, molestias ab ad ut reiciendis voluptas
+              vel architecto ratione voluptates asperiores?
+            </p>
+          </div>
         </div>
         <div class="col-md" data-aos="fadeInUp" data-aos-id="super-duper">
           <img src="images/react.svg" class="img-fluid" alt="" />
@@ -586,6 +616,13 @@
     </div>
   </section>
 
+  <!-- know more -->
+  <div class="container know-more">
+    <p> We are comming with Frontend design course for absolutly Beginers Soon</p>
+    <h5 class="text-success">Stay tuned</h5>
+    <p> for more information -> <a id="load" href="content/coming-soon.html" class="know-btn">Know more</a></p>
+  </div>
+  <!-- know more -->
   <!-- Footer -->
   <footer class="py-3 p-lg-4 bg-dark text-white text-center position-relative" data-aos="fadeInUp"
     data-aos-id="super-duper">
@@ -780,14 +817,6 @@
       })
       $('a').mouseleave(function () {
         $('.cursor').css('transform', 'scale(0.6)');
-      })
-    })
-  </script>
-
-  <script>
-    $(document).ready(function(){
-      $('.cursor').click(function(){
-        $('.cursor').unbind('mouseenter mouseleave')
       })
     })
   </script>
