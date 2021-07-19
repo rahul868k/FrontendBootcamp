@@ -103,11 +103,19 @@ html, body{
     place-content: center;
     transition: transform 0.5s ease;
   }
-.toggle-btn:hover,
-.toggle-btn:focus{
-  transform: rotate(1turn);
-  outline: none;
+
+  @media (hover: hover) {
+    .toggle-btn:hover,
+    .toggle-btn:focus{
+      transform: rotate(1turn);
+      outline: none;
 }
+  }
+  .ui-state-hover{
+    background: none;
+    border: none;
+    outline: none;
+  }
   /* === social media side-menu end */
 
    /* === scroll to top === */
