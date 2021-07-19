@@ -783,6 +783,15 @@
       })
     })
   </script>
+
+  <script>
+    $(document).ready(function(){
+      $('body, html').button().removeClass('ui-state-default');
+      $('body, html').button().hover(function(e){
+        $(this).removeClass('ui-state-hover');
+      })
+    })
+  </script>
   <!-- cursor animation -->
 </body>
 
