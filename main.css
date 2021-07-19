@@ -104,15 +104,16 @@ html, body{
     transition: transform 0.5s ease;
   }
 
-  @media (hover: hover) and (pointer: fine){
+  @media (hover: hover) {
     .toggle-btn:hover,
     .toggle-btn:focus{
       transform: rotate(1turn);
       outline: none;
 }
   }
-  html.touch *:hover{
+  *:hover{
     pointer-events: none !important;
+    background: none;
   }
   /* === social media side-menu end */
 
