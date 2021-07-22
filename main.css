@@ -1,3 +1,5 @@
+/* =======frontend bootcamp ========= style sheet  */
+
 html,
 body {
   scroll-behavior: smooth;
@@ -16,42 +18,26 @@ body {
 
 /* === loader ===*/
 
-#loader-container {
+#loader{
   /* position: absolute; */
   width: 100%;
-  height: 100vh;
+  height: 100%;
   /* inset: 0; */
-  background-color: #000;
+  background-color: #191F26;
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 5s;
+  transition: all 5s;
   z-index: 9999999;
 }
-.loader {
-  width: 50px;
-  height: 50px;
-  border: 3px solid;
-  color: #3498db;
-  border-radius: 50%;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-  animation: loader 1.2s linear infinite;
+.disappear{
+  animation: vanish 1.2s forwards;
 }
-
-@keyframes loader {
-  25% {
-    color: #2ecc71;
-  }
-  50% {
-    color: #f1c40f;
-  }
-  75% {
-    color: #e74c3c;
-  }
-  to {
-    transform: rotate(360deg);
+@keyframes vanish {
+  100%{
+    opacity: 0;
+    visibility: hidden;
   }
 }
 
@@ -243,7 +229,7 @@ header {
   right: 0;
   font-family: sans-serif;
   background: #212529;
-  padding: 5px 10px;
+  padding: 10px 10px;
   z-index: 1000;
 
   transition: all 300ms ease-in-out;
@@ -251,7 +237,7 @@ header {
 header ul {
   list-style-type: none;
   overflow: hidden;
-  max-height: 50px;
+  max-height: 55px;
   transition: max-height 0.4s ease-out;
 }
 
@@ -413,6 +399,10 @@ ul.menu {
   .menu li.button {
     padding-right: 0;
   }
+  li.active:not(.logo){
+    background: #ffc107;
+    border-radius: 50em;
+  }
   body,
   html {
     cursor: pointer;
@@ -491,11 +481,13 @@ header .menu-btn:checked ~ .menu-icon .nav-icon:after {
   right: 2%;
   top: 0;
   padding: 0 5px;
+  transition: transform 0.4s ease;
 }
 .ui-x:hover {
   filter: contrast(200%);
   outline: 1px solid;
   outline-offset: -2px;
+  transform: rotate(1turn);
 }
 .Lead :is(.lead, p):hover ~ .ui-fade{
   /* transform: rotate(2turn); */

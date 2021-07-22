@@ -141,6 +141,14 @@
         })
       });
     });
+
+    // active nav
+
+    $(function(){
+      $('.menu li').click(function(){
+        $(this).addClass('active').siblings().removeClass('active')
+      })
+    })
   </script>
 
   <!-- <script>
@@ -159,8 +167,8 @@
 <body>
 
   <!-- loader -->
-  <div id="loader-container">
-    <div class="loader"></div>
+  <div id="loader">
+    <img src="images/loader.gif" alt="loader">
   </div>
   <!-- cursor animation -->
   <div class="cursor"></div>
@@ -784,11 +792,29 @@
   <!-- loader animation -->
 
   <script>
-    var loader = document.getElementById("loader-container");
+    // // with css
+    // var loader = document.getElementById("loader-container");
 
-    window.addEventListener("load", function () {
-      loader.style.display = "none";
-    })
+    // window.addEventListener("load", function () {
+    //   loader.style.display = "none";
+    // })
+
+    // with gif
+
+    var loader = document.querySelector('#loader');
+
+    window.addEventListener("load", vanish);
+
+    function vanish(){
+      loader.classList.add('disappear')
+    }
+
+    // var loader = document.getElementById("loader");
+
+    // window.addEventListener("load", function () {
+    //   loader.style.display = "none";
+    // })
+
   </script>
   <!-- cursor animation -->
   <script>
