@@ -31,7 +31,7 @@ body {
   transition: all 5s;
   z-index: 9999999;
 }
-.disappear{
+/* .disappear{
   animation: vanish 1.2s forwards;
 }
 @keyframes vanish {
@@ -39,7 +39,7 @@ body {
     opacity: 0;
     visibility: hidden;
   }
-}
+} */
 
 /* ==== loader end ====*/
 
@@ -424,16 +424,16 @@ header .menu-btn:checked ~ .menu-icon .nav-icon:after {
   top: 0;
 }
 
-/* === scroll stuff === */
+/* === scroll stuff ===> reveal nav on scroll*/
 
-.scroll-down header {
+header.scroll-down {
   transform: translate3d(0, -100%, 0);
 }
 /* .scroll-up header{
   filter: drop-shadow(0 -10px 20px rgb(170,170,170));
 } */
 
-/* scroll stuff */
+/* scroll stuff ===> reveal nav on scroll */
 /* === css nav bar end === */
 
 /* svg  */
@@ -485,9 +485,9 @@ header .menu-btn:checked ~ .menu-icon .nav-icon:after {
 }
 .ui-x:hover {
   filter: contrast(200%);
-  outline: 1px solid;
-  outline-offset: -2px;
-  transform: rotate(1turn);
+  /* outline: 1px solid; */
+  /* outline-offset: -2px; */
+  transform: scale(1.4);
 }
 .Lead :is(.lead, p):hover ~ .ui-fade{
   /* transform: rotate(2turn); */
@@ -500,13 +500,16 @@ header .menu-btn:checked ~ .menu-icon .nav-icon:after {
     transform: rotateX(0);
   }
   100% {
-    transform: rotateX(1turn) rotateZ(1turn);
+    transform: rotateY(1turn);
   }
 }
-.ui-fade:hover{
+/* .ui-fade:hover{
   transition: transform 1s steps(5, end);
   transform: scale(1.2);
-}
+} */
+/* .ui-fade{
+  transition: transform 1s steps(5, end);
+} */
 /* .Lead :is(.lead, p):hover ~ .ui-fade {
   animation: pulse 1.5s infinite linear;
   
@@ -531,6 +534,76 @@ header .menu-btn:checked ~ .menu-icon .nav-icon:after {
 /* ui-message  */
 /* coming soon */
 
+/* background color toggle button */
+
+input[type="checkbox"]{
+  -webkit-appearance: none;
+  appearance: none;
+  visibility: hidden;
+  display: none;
+}
+.check{
+  position:absolute;
+  right: 3%;
+  cursor: pointer;
+  display: block;
+  font-size: clamp(20px, 50%, 25px);
+  /* width: 40px;
+   background: #092c3e;
+  width: clamp(20px, 50%, 40px);
+  height: clamp(10px, 50%, 20px);
+  height: 20px;
+  border-radius: 20px;
+  overflow: hidden; */
+  transition: all ease-in 0.5s;
+}
+ .bg-c{
+  background: #092c3e;
+  color: white;
+  transition: all 0.5s ease-in;
+}
+@media (hover: hover) {
+  .check:hover,
+  .check:focus{
+    transform: rotate(180deg);
+  }
+}
+/* input[type="checkbox"]:checked ~ .check{
+  background:#fff;
+} */
+/* .check::before{
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #fff;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+input[type="checkbox"]:checked ~ .check::before{
+  /* transform: translateX(-50px); */
+  /* transform: translateX(20px);
+  background: #092c3e;
+} */ */
+/* .check::after{
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #092c3e;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+  transform: translateX(50px);
+}
+input[type="checkbox"]:checked ~ .check::after{
+  transform: translateX(0px);
+} */
+
+/* background color toggle button */
 .know-more {
   margin: 20px 0;
   /* outline: 4px double orange; */
