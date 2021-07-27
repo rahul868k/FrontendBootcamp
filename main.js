@@ -154,9 +154,20 @@ $(document).ready(function () {
             return false;
         });
     });
-
 });
 
+// custom scroll bar horizontal
+$(function () {
+    $('#progressbar-hoz').hide();
+});
+$(window).scroll(function () {
+    $('#progressbar-hoz').show();
+    var scroll = $(window).show().scrollTop(),
+        dh = $(document).height(),
+        wh = $(window).height();
+    scrollPercent = (scroll / (dh - wh)) * 100;
+    $('#progressbar-hoz').css('width', scrollPercent + '%');
+})
 //   ==================== java-script =============
 
 // == loader animation ==

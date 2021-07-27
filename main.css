@@ -43,6 +43,34 @@ body {
 
 /* ==== loader end ====*/
 
+/* custom scroll bar */
+
+/* vertical */
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(transparent, #30ff00);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(transparent, #00c6ff);
+}
+/* horizontal */
+
+#progressbar-hoz{
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  z-index: 1001;
+  border-radius: 10px;
+  background: linear-gradient(to top, #fcb045, #fd1d1d, #833ab4);
+}
+/* custom scroll bar */
+
 /* ==== cursor start */
 
 .cursor {
