@@ -58,6 +58,11 @@ $(function () {
         $(this).addClass('active').siblings().removeClass('active')
     })
 })
+$(function () {
+    $('.item:not(.button)').click(function () {
+        $(this).addClass('activeb').siblings().removeClass('activeb')
+    })
+})
 
 //== page load animation ==
 
@@ -80,11 +85,10 @@ $(document).ready(function () {
         $(this).toggleClass('fa-chevron-right');
     })
 })
-
 // ==== ui info show up ===
 
 $(document).ready(function () {
-    $('.ui-msg').append('<span class="ui-x">X</span>');
+    $('.ui-msg').append('<span class="ui-x">&times;</span>');
 
     $('.ui-msg').hide();
     $(function () {
@@ -167,7 +171,28 @@ $(window).scroll(function () {
         wh = $(window).height();
     scrollPercent = (scroll / (dh - wh)) * 100;
     $('#progressbar-hoz').css('width', scrollPercent + '%');
+});
+
+// model pop-up
+
+$(document).ready(function(){
+    $('.model-x').click(function(){
+        $('.card-model-parent').css('display','block');
+        $('.blur,.blur,.blur,.blur,header').css('filter','blur(6px)');
+        $('body').css('overflow','hidden')
+    });
+    $('.x-model').click(function(){
+        $('.card-model-parent').css('display','none')
+        $('.blur,.blur,.blur,.blur,header').css('filter','blur(0)')
+        $('body').css('overflow','initial')
+    });
+    $('.card-model-parent').click(function(){
+        $('.card-model-parent').css('display','none')
+        $('.blur,.blur,.blur,.blur,header').css('filter','blur(0)')
+        $('body').css('overflow','initial')
+    })
 })
+
 //   ==================== java-script =============
 
 // == loader animation ==
@@ -215,3 +240,38 @@ document.addEventListener('click', () => {
         cursor.classList.remove('cursor-expand');
     }, 500)
 })
+
+// card model
+
+// var parent= document.querySelector('.card-model-parent');
+//     btn= document.getElementsByClassName('model-x');
+//     x=document.querySelector('.x-model')
+//     section=document.querySelector('.blur');
+//     body=document.getElementsByTagName('body')[0];
+
+//     btn[0].addEventListener('click', function(){
+//         parent.style.display='block';
+//         section.style.filter='blur(10px)';
+//         body.style.overflow='hidden'
+//     })
+//     btn[1].addEventListener('click', function(){
+//         parent.style.display='block';
+//         section.style.filter='blur(10px)';
+//         body.style.overflow='hidden'
+//     })
+//     btn[2].addEventListener('click', function(){
+//         parent.style.display='block';
+//         section.style.filter='blur(10px)';
+//         body.style.overflow='hidden'
+//     })
+//     x.addEventListener('click', function(){
+//         parent.style.display='none';
+//         section.style.filter='blur(0)';
+//         body.style.overflow='initial'
+//     })
+//     parent.addEventListener('click', function(){
+//         parent.style.display='none';
+//         section.style.filter='blur(0)';
+//         body.style.overflow='initial'
+//     })
+
